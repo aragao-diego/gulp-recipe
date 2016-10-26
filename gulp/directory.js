@@ -1,20 +1,21 @@
 module.exports = (function () {
+    "use strict";
         var source = (function () {
-            var root = 'source/',
+            var root = "app/",
                 assets = function () {
-                    return root + 'assets/';
+                    return root + "assets/";
                 },
                 javascript = function () {
-                    return assets() + 'javascript/';
+                    return root;
                 },
                 less = function () {
-                    return assets() + 'less/';
+                    return assets() + "less/";
                 },
                 pug = function () {
-                    return root + 'pug/';
+                    return root;
                 },
                 image = function () {
-                    return assets() + 'image/'
+                    return assets() + "img/";
                 };
 
             return {
@@ -27,18 +28,18 @@ module.exports = (function () {
             };
         }()),
             target = (function () {
-                var root = 'target/',
+                var root = "dist/",
                     assets = function () {
-                        return root + 'assets/';
+                        return root + "assets/";
                     },
                     javascript = function () {
-                        return assets() + 'javascript/';
+                        return assets() + "javascript/";
                     },
                     stylesheet = function () {
-                        return assets() + 'stylesheet/';
+                        return assets();
                     },
                     image = function () {
-                        return assets() + 'image/';
+                        return assets() + "img/";
                     };
 
                 return {
